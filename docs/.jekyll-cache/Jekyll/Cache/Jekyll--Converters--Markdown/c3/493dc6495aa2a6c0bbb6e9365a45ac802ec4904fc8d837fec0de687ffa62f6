@@ -1,0 +1,8 @@
+I"p<p><i class="fas fa-search fa-2x"></i></p>
+
+<h1 id="create-a-hotlink">Create a hotlink</h1>
+
+<p>You can have quick links to important sections using those big squares. It is easy to use, simply add a markdown file in the <code class="language-plaintext highlighter-rouge">thumbnails</code> section. Easy peezy!</p>
+
+<p><a href="/#photos">Jump to documentation</a></p>
+:ET

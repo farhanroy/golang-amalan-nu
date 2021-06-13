@@ -1,0 +1,13 @@
+I"”<hr />
+<h1 id="errors">Errors</h1>
+
+<p>If an error occurs, whether on the server or client side, the error message(s) will be returned in an errors array. For example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">422</span> <span class="nx">Unprocessable</span> <span class="nx">Entity</span>
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Username is missing"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Password cannot be blank"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+:ET
