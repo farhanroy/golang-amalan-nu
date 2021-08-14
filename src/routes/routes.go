@@ -18,5 +18,7 @@ func Init() *echo.Echo {
 
 	e.GET("/api/shalawat", controllers.FetchShalawat)
 
+	e.GET("/api/haul", controllers.FetchHaul)
+
 	return e
 }
