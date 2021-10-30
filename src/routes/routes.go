@@ -1,7 +1,6 @@
 package routes
 
 import (
-	"net/http"
 
 	"github.com/farhanroy/api-amalan-nahdliyin/src/controllers"
 	"github.com/labstack/echo"
@@ -11,7 +10,11 @@ func Init() *echo.Echo {
 	e := echo.New()
 
 	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Selamat Datang di Amalan NU!")
+		return c.File("landing/index.html")
+	})
+
+	e.GET("/docs", func(c echo.Context) error {
+		return c.File("docs/index.html")
 	})
 
 	e.GET("/api/tahlil", controllers.FetchTahlil)

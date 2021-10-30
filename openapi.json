@@ -1,0 +1,86 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Amalan NU RESTful API",
+      "version": "1",
+      "description": "API yang memberikan data data tentang amalan warga nahdliyyin",
+      "termsOfService": "https://farhanroy.dev",
+      "contact": {
+        "name": "M. Roy Farchan",
+        "email": "farhanroy120@gmail.com",
+        "url": "https://farhanroy.dev"
+      },
+      "license": {
+        "name": "APACHE 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+      }
+    },
+    "servers": [
+      {
+        "description": "Amalan NU RESTful API Server",
+        "url": "https://amalanu.herokuapp.com/api"
+      }
+    ],
+    "paths": {
+      "/tahlil": {
+        "get": {
+          "tags": [
+            "Tahlil"
+          ],
+          "summary": "",
+          "description": "Mengambil data tekstual tahlil lengkap dari awal hingga akhir, dikutip dari laman ",
+          "responses": {
+            "200": {
+              "description": "Success get all todolist",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Tahlil"
+                  },
+                  "examples": {
+                    "success": {
+                      "description": "Example success get all todolist",
+                      "value": {
+                        "status": 200,
+                        "message": "Success",
+                        "data": [
+                        {
+                        "id": 1,
+                        "title": "Pengantar Al-Fatihah",
+                        "arabic": "اِلَى حَضْرَةِ النَّبِيِّ صَلَّى اللهُ عَلَيهِ وَسَلَّمَ وَاَلِهِ وصَحْبِهِ شَيْءٌ لِلهِ لَهُمُ الْفَاتِحَةُ",
+                        "translation": "Dengan nama Allah yang maha pengasih lagi maha penyayang. Untuk yang terhormat Nabi Muhammad SAW, segenap keluarga, dan para sahabatnya. Bacaan Al-Fatihah ini kami tujukan kepada Allah dan pahalanya untuk mereka semua. Al-Fatihah…"
+                        }
+                        
+                    ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Tahlil": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "arabic": {
+                "type": "string"
+            },
+            "translation": {
+                "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
